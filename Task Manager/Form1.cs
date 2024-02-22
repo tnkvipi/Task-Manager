@@ -15,7 +15,7 @@ namespace Task_Manager
 {
     public partial class Form1 : Form
     {
-        private List<Process> processes = null;// главный список в котором храняться все процессы 
+        private List<Process> processes = null;
         private ListViewitemComparer Comparer = null;
         
         public Form1()
@@ -27,8 +27,8 @@ namespace Task_Manager
         {
 
         }
-        // метод который работает только со списком бэкэндом 
-        private void GetProcesses() // метод создает список и обновляет его 
+       
+        private void GetProcesses() 
         {
             processes.Clear();// очистка списка 
             processes = Process.GetProcesses().ToList<Process>();// заполнение списка заново получаем все системные процессы 
