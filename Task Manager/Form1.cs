@@ -30,11 +30,11 @@ namespace Task_Manager
        
         private void GetProcesses() 
         {
-            processes.Clear();// очистка списка 
-            processes = Process.GetProcesses().ToList<Process>();// заполнение списка заново получаем все системные процессы 
+            processes.Clear();
+            processes = Process.GetProcesses().ToList<Process>();
 
         }
-        // метод который работает с листвью фронтендом 
+       
         private void RefreshProcessesList()
         {
             try
