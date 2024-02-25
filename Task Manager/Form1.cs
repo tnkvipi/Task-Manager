@@ -15,7 +15,7 @@ namespace Task_Manager
 {
     public partial class Form1 : Form
     {
-        private List<Process> processes = null;
+        private List<Process> processes = null;//
         private ListViewitemComparer Comparer = null;
         
         public Form1()
