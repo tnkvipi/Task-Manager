@@ -15,7 +15,7 @@ namespace Task_Manager
 {
     public partial class Form1 : Form
     {
-        private List<Process> processes = null;//
+        private List<Process> processes = null;
         private ListViewitemComparer Comparer = null;
         
         public Form1()
@@ -39,9 +39,9 @@ namespace Task_Manager
         {
             try
             {
-                listView1.Items.Clear();// очистим лист 
-                double memSize = 0;// переменная при переборе всех процессов храниться память 
-                foreach (Process p in processes) // с помощью цикла переберем все процессы 
+                listView1.Items.Clear();
+                double memSize = 0;
+                foreach (Process p in processes) 
                 {
                     if (p != null)
                     {
@@ -59,9 +59,8 @@ namespace Task_Manager
 
 
                 }
-                Text = "running processes:" + processes.Count.ToString();// текст для шапки формы 
-                                                                         // Перегрузка метода фильтровать процессы по имени 
-
+                Text = "running processes:" + processes.Count.ToString();
+                                                                         
 
             }
             catch (Exception) { }
