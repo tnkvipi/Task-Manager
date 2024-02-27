@@ -67,9 +67,9 @@ namespace Task_Manager
         }
         private void RefreshProcessesList(List<Process> processes, string keyword)
         {
-            listView1.Items.Clear();// очистим лист 
-            double memSize = 0;// переменная при переборе всех процессов храниться память 
-            foreach (Process p in processes) // с помощью цикла переберем все процессы 
+            listView1.Items.Clear();
+            double memSize = 0; 
+            foreach (Process p in processes) 
             {
                 memSize = 0;
                 PerformanceCounter pc = new PerformanceCounter();
@@ -83,24 +83,24 @@ namespace Task_Manager
                 pc.Dispose();
 
             }
-            Text = $"running processes '{keyword}':" + processes.Count.ToString();// текст для шапки формы 
+            Text = $"running processes '{keyword}':" + processes.Count.ToString();
 
 
         }
-        // метод для завершения одного процесса который мы выбрали 
+        
         private void KillProcess(Process process)
         {
             process.Kill();
             process.WaitForExit();
         }
-        // метод завершения дерева процессов 
+        
         private void KillProcessAndChildrem(int pid)
         {
             if (pid == 0)
             {
-                return; // проверка что пид не равен 0
+                return; 
             }
-            // находит все связанные процессы по айди
+          
             ManagementObjectSearcher searcher = new ManagementObjectSearcher(
                 "Select * From Win32_Process Where ParentProcessID=" + pid);
             ManagementObjectCollection objectCollection = searcher.Get();
@@ -120,7 +120,7 @@ namespace Task_Manager
                 
             }
         }
-        // метод для получения айди родительского процесса
+       
         private int GetParentProcessId(Process p)
         {
             int parentID = 0;
