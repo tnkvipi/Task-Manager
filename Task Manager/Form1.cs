@@ -141,23 +141,23 @@ namespace Task_Manager
 
         }
 
-        private void Form1_Load(object sender, EventArgs e)// обработчик события в шапке 
+        private void Form1_Load(object sender, EventArgs e)
         {
-            processes = new List<Process>();// инициализация списка 
+            processes = new List<Process>(); 
             GetProcesses();
-            RefreshProcessesList();// заполняет собятия лист вью
+            RefreshProcessesList();
             Comparer = new ListViewitemComparer();
             Comparer.ColumnIndex = 0;
 
         }
 
-        private void toolStripButton1_Click(object sender, EventArgs e)// обработчик кнопки обновить 
+        private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            GetProcesses ();// вызываем 2 метода 
+            GetProcesses ();
             RefreshProcessesList ();
         }
 
-        private void toolStripButton2_Click(object sender, EventArgs e)// обработчик кнопки завершить 
+        private void toolStripButton2_Click(object sender, EventArgs e) 
         {
             try
             {
@@ -178,7 +178,7 @@ namespace Task_Manager
             }
         }
 
-        private void toolStripButton3_Click(object sender, EventArgs e)// обработчик дерева процессов 
+        private void toolStripButton3_Click(object sender, EventArgs e)
         {
             try
             {
@@ -198,7 +198,7 @@ namespace Task_Manager
             }
         }
 
-        private void completeTheProcessTreeToolStripMenuItem_Click(object sender, EventArgs e)// обработчик дерева процессов 
+        private void completeTheProcessTreeToolStripMenuItem_Click(object sender, EventArgs e) 
         {
             try
             {
@@ -218,7 +218,7 @@ namespace Task_Manager
             }
         }
 
-        private void startATaskToolStripMenuItem_Click(object sender, EventArgs e)// обработчик запустить задачу 
+        private void startATaskToolStripMenuItem_Click(object sender, EventArgs e) 
         {
             string path = Interaction.InputBox("enter the program name", "starting a new task");
             try
