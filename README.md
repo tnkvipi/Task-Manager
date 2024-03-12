@@ -1,5 +1,5 @@
 # Task Manager
-
+Displays computer processes.
 
 It does not require installation.
 It is not licensed. Free to use.
